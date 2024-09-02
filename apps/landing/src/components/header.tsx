@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import HeadRight from '../../assets/icons/ico-head-right.svg';
-import HeadImg from '../../assets/images/image-head.png';
-import HeadSmallImg from '../../assets/images/image-head-small.png';
+import HeadRight from '../assets/icons/ico-head-right.svg';
+import HeadImg from '../assets/images/image-head.png';
+import HeadSmallImg from '../assets/images/image-head-small.png';
 
 interface HeaderProps {
   scrollToReservation: () => void;
@@ -10,10 +10,10 @@ interface HeaderProps {
 function Header({ scrollToReservation }: HeaderProps) {
   return (
     <>
-      <div className="relative h-[900px] w-full tablet:hidden">
+      <div className="relative tablet:hidden h-[900px] w-full  mobile:hidden">
         <Image src={HeadImg} alt="Header Image" fill />
       </div>
-      <div className="relative h-[600px] w-full pc:hidden">
+      <div className="relative tablet:h-[700px ]  h-[600px] w-full pc:hidden">
         <Image src={HeadSmallImg} alt="Header Small Image" fill />
       </div>
       <section className="absolute left-1/2 top-[100px] -translate-x-1/2 transform text-center">

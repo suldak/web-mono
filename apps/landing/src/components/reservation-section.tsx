@@ -10,7 +10,7 @@ function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
   const [email, setEmail] = useState('');
   const enrollMutation = useEnrollReservation();
 
-  function handleSubscribe() {
+  const handleSubscribe = () => {
     if (email.trim()) {
       enrollMutation.mutate(email, {
         onSuccess: function (data) {
@@ -21,24 +21,29 @@ function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
           setEmail(''); // 성공 시 입력 필드 초기화
         },
         onError: function (error) {
-          toast.error('오류: 다시 시도해주세요.');
+          toast.error(' 오류: 다시 시도해주세요.');
         },
       });
     }
-  }
+  };
 
   return (
     <div className="relative h-[684px] w-full mobile:h-[390px]" ref={ref}>
-      {/* <Image src={ReservationImg} alt="사전예약" fill /> */}
+      <Image
+        src={ReservationImg}
+        alt={'사전예약'}
+        layout="fill"
+        objectFit="cover"
+      />
       <div className="absolute inset-0 z-10 flex w-full flex-col items-center justify-center text-white">
-        <h2 className="text-[80px] font-bold mobile:text-[36px]">
+        <div className="text-[80px] font-bold mobile:text-[36px]">
           술닥술닥 사전예약
-        </h2>
-        <p className="mb-[40px] text-center text-[30px] mobile:text-[16px]">
+        </div>
+        <div className="mb-[40px] text-center text-[30px] mobile:text-[16px]">
           메일주소를 입력하시면 술닥술닥의{' '}
           <br className="tablet:hidden pc:hidden" />
           오픈 소식을 알려드릴게요!
-        </p>
+        </div>
         <div className="flex items-center text-[25px] mobile:flex-col mobile:justify-center mobile:space-y-[8px] mobile:text-[16px] tablet:flex-col tablet:space-y-[8px]">
           <input
             className="h-[68px] w-[330px] rounded-[10px] bg-white/50 px-4 text-black mobile:h-[48px] tablet:w-[600px] pc:w-[809px]"
@@ -47,7 +52,6 @@ function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
               setEmail(e.target.value);
             }}
             type="email"
-            placeholder="이메일 주소를 입력하세요"
           />
           <button
             className="ml-[20px] h-[68px] w-[233px] rounded-[10px] bg-white text-[25px] font-bold text-suldak-mint-500 mobile:hidden tablet:hidden"

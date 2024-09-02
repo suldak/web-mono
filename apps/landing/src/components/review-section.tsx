@@ -119,11 +119,11 @@ function ReviewSection() {
             {bottomImages.map((img, index) => (
               <div key={index} className="h-[250px] px-[10px] mobile:px-[4px]">
                 <div className="relative h-[250px] w-[416px] overflow-hidden rounded-[20px] mobile:h-[120px] mobile:w-[168px] mobile:rounded-[12px]">
-                  {/* <Image
+                  <Image
                     src={img}
                     alt={`Review image ${(index % 5) + 6}`}
                     fill
-                  /> */}
+                  />
                 </div>
               </div>
             ))}

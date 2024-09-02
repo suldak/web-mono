@@ -15,7 +15,7 @@ function NavigationBar({ scrollToReservation }: NavigationProps) {
         <div className="flex items-center justify-between px-6 py-4 text-[20px]">
           <div className="flex items-center">
             <div className="relative h-[48px] w-[90px] mobile:ml-[16px] mobile:h-[42px] mobile:w-[78px] pc:mr-[20px] tablet:mr-[20px]">
-              {/* <Image src={SmallLogo} alt="logo" fill /> */}
+              <Image src={SmallLogo} alt="logo" fill />
             </div>
             <div className="mobile:hidden">즐거운 술 문화를 위한 플랫폼</div>
           </div>
