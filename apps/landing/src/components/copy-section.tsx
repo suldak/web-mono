@@ -1,6 +1,6 @@
-import Logo from '../assets/images/image-logo-big.png';
-import Line from '../assets/icons/ico-line.svg';
-import SmallLine from '../assets/icons/ico-line-small.svg';
+import Logo from '@assets/images/image-logo-big.png';
+import Line from '@assets/icons/ico-line.svg';
+import SmallLine from '@assets/icons/ico-line-small.svg';
 import Image from 'next/image';
 function CopySection() {
   return (

@@ -1,5 +1,5 @@
-import TalkImg from '../assets/icons/ico-talk.svg';
-import GroupCarousel from './group-carousel';
+import TalkImg from '@assets/icons/ico-talk.svg';
+import GroupCarousel from '@components/group-carousel';
 
 function GroupSection() {
   return (

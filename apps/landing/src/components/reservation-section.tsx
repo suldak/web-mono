@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import ReservationImg from '../assets/images/bg-reservation.png';
+import ReservationImg from '@assets/images/bg-reservation.png';
 import { forwardRef, ForwardedRef, useState } from 'react';
 import toast from 'react-hot-toast';
 import { useEnrollReservation } from 'apis/useEnrollReservation';

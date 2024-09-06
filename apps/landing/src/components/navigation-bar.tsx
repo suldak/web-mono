@@ -1,7 +1,7 @@
 'use client';
 
-import SmallLogo from '../assets/images/image-logo-small.png';
-import HeadRight from '../assets/icons/ico-head-right.svg';
+import SmallLogo from '@assets/images/image-logo-small.png';
+import HeadRight from '@assets/icons/ico-head-right.svg';
 import Image from 'next/image';
 
 interface NavigationProps {
