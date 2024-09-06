@@ -6,7 +6,6 @@ import GroupSection from '@components/group-section';
 import Header from '@components/header';
 import NavigationBar from '@components/navigation-bar';
 import ReservationSection from '@components/reservation-section';
-import ReservationToaster from '@components/reservation-toaster';
 import ReviewSection from '@components/review-section';
 import Footer from '@components/footer';
 
@@ -36,7 +35,6 @@ function LandingPage() {
       <ReservationSection ref={reservationRef} />
       <Footer />
       <NavigationBar scrollToReservation={scrollToReservation} />
-      <ReservationToaster />
     </div>
   );
 }

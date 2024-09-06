@@ -8,6 +8,9 @@ import { useEnrollReservation } from '@apis/useEnrollReservation';
 
 function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
   const [email, setEmail] = useState('');
+  const [enrollmentStatus, setEnrollmentStatus] = useState<
+    'success' | 'error' | null
+  >(null);
   const enrollMutation = useEnrollReservation();
 
   const handleSubscribe = () => {
@@ -19,9 +22,11 @@ function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
           }
           toast.success('성공적으로 등록되었습니다!');
           setEmail(''); // 성공 시 입력 필드 초기화
+          setEnrollmentStatus('success');
         },
         onError: function (error) {
           toast.error(' 오류: 다시 시도해주세요.');
+          setEnrollmentStatus('error');
         },
       });
     }
@@ -49,29 +54,41 @@ function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
           <br className="pc:hidden" />
           오픈 소식을 알려드릴게요!
         </div>
-        <div className="flex items-center text-[25px] mobile:flex-col mobile:justify-center mobile:space-y-[8px] mobile:text-[16px] tablet:flex-col tablet:space-y-[8px]">
-          <input
-            className="h-[68px] w-[330px] rounded-[10px] bg-white/50 px-4 text-black mobile:h-[48px] tablet:w-[600px] pc:w-[809px]"
-            value={email}
-            onChange={function (e) {
-              setEmail(e.target.value);
-            }}
-            type="email"
-          />
-          <button
-            className="ml-[20px] h-[68px] w-[233px] rounded-[10px] bg-white text-[25px] font-bold text-suldak-mint-500 mobile:hidden tablet:hidden"
-            onClick={handleSubscribe}
-            disabled={enrollMutation.isPending || !email.trim()}
-          >
-            {enrollMutation.isPending ? '처리 중...' : 'Subscribe'}
-          </button>
-          <button
-            className="h-[68px] w-[233px] rounded-[10px] bg-white text-[25px] font-bold text-suldak-mint-500 mobile:h-[48px] mobile:w-[330px] mobile:text-[16px] tablet:w-[600px] pc:hidden"
-            onClick={handleSubscribe}
-            disabled={enrollMutation.isPending || !email.trim()}
-          >
-            {enrollMutation.isPending ? '처리 중...' : '제출하기'}
-          </button>
+        <div className="flex flex-col items-center space-y-4">
+          <div className="flex items-center text-[25px] mobile:flex-col mobile:justify-center mobile:space-y-[8px] mobile:text-[16px] tablet:flex-col tablet:space-y-[8px]">
+            <input
+              className="h-[68px] w-[330px] rounded-[10px] bg-white/50 px-4 text-black mobile:h-[48px] tablet:w-[600px] pc:w-[809px]"
+              value={email}
+              onChange={function (e) {
+                setEmail(e.target.value);
+              }}
+              type="email"
+            />
+            <button
+              className="ml-[20px] h-[68px] w-[233px] rounded-[10px] bg-white text-[25px] font-bold text-suldak-mint-500 mobile:hidden tablet:hidden"
+              onClick={handleSubscribe}
+              disabled={enrollMutation.isPending || !email.trim()}
+            >
+              {enrollMutation.isPending ? '처리 중...' : 'Subscribe'}
+            </button>
+            <button
+              className="h-[68px] w-[233px] rounded-[10px] bg-white text-[25px] font-bold text-suldak-mint-500 mobile:h-[48px] mobile:w-[330px] mobile:text-[16px] tablet:w-[600px] pc:hidden"
+              onClick={handleSubscribe}
+              disabled={enrollMutation.isPending || !email.trim()}
+            >
+              {enrollMutation.isPending ? '처리 중...' : '제출하기'}
+            </button>
+          </div>
+          <div className="h-[24px] text-center">
+            {enrollmentStatus === 'success' && (
+              <div className="text-black">
+                사전예약이 완료되었습니다. 감사합니다.
+              </div>
+            )}
+            {enrollmentStatus === 'error' && (
+              <div className="text-red-500">다시 시도해주세요.</div>
+            )}
+          </div>
         </div>
       </div>
     </div>
