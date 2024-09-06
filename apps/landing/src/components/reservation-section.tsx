@@ -28,20 +28,25 @@ function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
   };
 
   return (
-    <div className="relative h-[684px] w-full mobile:h-[390px]" ref={ref}>
-      <Image
-        src={ReservationImg}
-        alt={'사전예약'}
-        layout="fill"
-        objectFit="cover"
-      />
+    <div
+      className="relative h-[684px] mobile:bg-suldak-mint-500 w-full mobile:h-[390px]"
+      ref={ref}
+    >
+      <div className="mobile:hidden">
+        <Image
+          src={ReservationImg}
+          alt={'사전예약'}
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
       <div className="absolute inset-0 z-10 flex w-full flex-col items-center justify-center text-white">
         <div className="text-[80px] font-bold mobile:text-[36px]">
           술닥술닥 사전예약
         </div>
         <div className="mb-[40px] text-center text-[30px] mobile:text-[16px]">
-          메일주소를 입력하시면 술닥술닥의{' '}
-          <br className="tablet:hidden pc:hidden" />
+          메일주소를 입력하시면 술닥술닥의
+          <br className="pc:hidden" />
           오픈 소식을 알려드릴게요!
         </div>
         <div className="flex items-center text-[25px] mobile:flex-col mobile:justify-center mobile:space-y-[8px] mobile:text-[16px] tablet:flex-col tablet:space-y-[8px]">

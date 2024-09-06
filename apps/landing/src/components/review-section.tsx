@@ -88,7 +88,7 @@ function ReviewSection() {
 
   return (
     <div className="h-[950px] w-full bg-gray-100 py-[120px] mobile:h-[516px] mobile:py-[60px] mobile:text-center tablet:text-center">
-      <div className="flex items-center mobile:flex-col mobile:justify-center tablet:justify-center pc:ml-[18%]">
+      <div className="flex w-full items-center mobile:flex-col mobile:justify-center tablet:justify-center pc:ml-[18%]">
         <TalkImg className="mr-4 mobile:mb-[8px]" />
         <h2 className="text-[32px] font-bold mobile:text-[22px]">
           당신이 궁금해하는 모든 것
