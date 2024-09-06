@@ -8,6 +8,7 @@ import NavigationBar from '@components/navigation-bar';
 import ReservationSection from '@components/reservation-section';
 import ReservationToaster from '@components/reservation-toaster';
 import ReviewSection from '@components/review-section';
+import Footer from '@components/footer';
 
 function LandingPage() {
   const [isMounted, setIsMounted] = useState(false);
@@ -33,6 +34,7 @@ function LandingPage() {
       <ServiceSection />
       <ReviewSection />
       <ReservationSection ref={reservationRef} />
+      <Footer />
       <NavigationBar scrollToReservation={scrollToReservation} />
       <ReservationToaster />
     </div>
