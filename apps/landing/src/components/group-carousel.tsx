@@ -11,6 +11,7 @@ import ProfileImg7 from '@assets/images/image-profile-7.png';
 import ProfileImg8 from '@assets/images/image-profile-8.png';
 import CarouselCard from '@components/carousel-card';
 
+
 function GroupCarousel() {
   const settings = {
     dots: false,

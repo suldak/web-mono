@@ -32,3 +32,4 @@ const Footer: React.ForwardRefRenderFunction<HTMLDivElement, FooterProps> = (
 };
 
 export default React.forwardRef(Footer);
+

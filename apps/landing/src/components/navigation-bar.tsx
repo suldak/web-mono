@@ -45,3 +45,4 @@ function NavigationBar({ scrollToReservation }: NavigationProps) {
 }
 
 export default NavigationBar;
+
