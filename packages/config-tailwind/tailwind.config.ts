@@ -68,6 +68,5 @@ const config: Omit<Config, 'content'> = {
       },
     },
   },
-  plugins: [require('tailwind-scrollbar-hide')],
 };
 export default config;
