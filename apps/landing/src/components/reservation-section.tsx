@@ -4,7 +4,7 @@ import Image from 'next/image';
 import ReservationImg from '@assets/images/bg-reservation.png';
 import { forwardRef, ForwardedRef, useState } from 'react';
 import toast from 'react-hot-toast';
-import { useEnrollReservation } from 'apis/useEnrollReservation';
+import { useEnrollReservation } from '@apis/useEnrollReservation';
 
 function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
   const [email, setEmail] = useState('');

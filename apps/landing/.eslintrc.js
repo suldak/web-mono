@@ -7,6 +7,7 @@ module.exports = {
           ['@', './src'],
           ['@components', './src/components'],
           ['@assets', './src/assets'],
+          ['@apis', './apis'],
         ],
         extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
       },
