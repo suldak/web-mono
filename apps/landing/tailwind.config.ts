@@ -11,8 +11,8 @@ const config: Partial<Config> = {
       },
       screens: {
         mobile: { max: '639px' },
-        tablet: { min: '640px', max: '1023px' },
-        pc: { min: '1024px' },
+        tablet: { min: '640px', max: '1199px' },
+        pc: { min: '1200px' },
       },
     },
   },
