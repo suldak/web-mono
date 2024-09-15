@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Lottie from 'lottie-react';
 import HeadRight from '@assets/icons/ico-head-right.svg';
 import HeadImg from '@assets/images/image-head.png';
-import HeadSmallImg from '@assets/images/image-head-small.png';
 import AnimationData from '@assets/images/animation-web-blog.json';
 import VectorImg from '@assets/images/img-vector.png';
 interface HeaderProps {
@@ -34,11 +33,11 @@ function Header({ scrollToReservation }: HeaderProps) {
             </div>
           </div>
           <div className="absolute justify-center items-center bottom-0 pc:hidden mobile:hidden">
-            <Image src={HeadImg} alt="Header Image" height={792} width={640} />
+            <Image src={HeadImg} alt="Header Image" height={743} width={600} />
           </div>
           <div className="absolute justify-center items-center bottom-0 pc:hidden tablet:hidden">
             <Image
-              src={HeadSmallImg}
+              src={HeadImg}
               alt="Header Small Image"
               height={288}
               width={355}
