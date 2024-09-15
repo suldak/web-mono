@@ -16,6 +16,7 @@ const config: Omit<Config, 'content'> = {
         'suldak-orange-500': '#ff9300',
         'suldak-green-500': '#20bf27',
         'suldak-red-500': '#e45141',
+        'suldak-mint-600': '#0698a2',
         'suldak-mint-500': '#08beca',
         'suldak-mint-50': '#f6fdfe',
         'suldak-mint-100': '#CEF2F4',
