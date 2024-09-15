@@ -11,24 +11,22 @@ function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
   const [enrollmentStatus, setEnrollmentStatus] = useState<
     'success' | 'error' | null
   >(null);
-  const enrollMutation = useEnrollReservation();
+  const { mutate, isLoading } = useEnrollReservation();
 
-  const handleSubscribe = () => {
+  const handleSubscribe = async () => {
     if (email.trim()) {
-      enrollMutation.mutate(email, {
-        onSuccess: function (data) {
-          if (process.env.NODE_ENV === 'development') {
-            console.log('Enrollment response:', data);
-          }
-          toast.success('성공적으로 등록되었습니다!');
-          setEmail(''); // 성공 시 입력 필드 초기화
-          setEnrollmentStatus('success');
-        },
-        onError: function (error) {
-          toast.error(' 오류: 다시 시도해주세요.');
-          setEnrollmentStatus('error');
-        },
-      });
+      try {
+        const data = await mutate(email);
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Enrollment response:', data);
+        }
+        toast.success('성공적으로 등록되었습니다!');
+        setEmail('');
+        setEnrollmentStatus('success');
+      } catch (error) {
+        toast.error(' 오류: 다시 시도해주세요.');
+        setEnrollmentStatus('error');
+      }
     }
   };
 
@@ -67,16 +65,16 @@ function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
             <button
               className="ml-[20px] h-[68px] w-[233px] rounded-[10px] bg-white text-[25px] font-bold text-suldak-mint-500 mobile:hidden tablet:hidden"
               onClick={handleSubscribe}
-              disabled={enrollMutation.isPending || !email.trim()}
+              disabled={isLoading || !email.trim()}
             >
-              {enrollMutation.isPending ? '처리 중...' : 'Subscribe'}
+              {isLoading ? '처리 중...' : 'Subscribe'}
             </button>
             <button
               className="h-[68px] w-[233px] rounded-[10px] bg-white text-[25px] font-bold text-suldak-mint-500 mobile:h-[48px] mobile:w-[330px] mobile:text-[16px] tablet:w-[600px] pc:hidden"
               onClick={handleSubscribe}
-              disabled={enrollMutation.isPending || !email.trim()}
+              disabled={isLoading || !email.trim()}
             >
-              {enrollMutation.isPending ? '처리 중...' : '제출하기'}
+              {isLoading ? '처리 중...' : '제출하기'}
             </button>
           </div>
           <div className="h-[24px] text-center">
