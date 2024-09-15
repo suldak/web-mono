@@ -32,10 +32,10 @@ function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
 
   return (
     <div
-      className="relative h-[684px] mobile:bg-suldak-mint-500 w-full mobile:h-[390px]"
+      className="relative h-[684px] bg-suldak-mint-500 w-full mobile:h-[390px]"
       ref={ref}
     >
-      <div className="mobile:hidden">
+      <div className="mobile:hidden tablet:hidden">
         <Image
           src={ReservationImg}
           alt={'사전예약'}
