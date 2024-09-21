@@ -28,20 +28,24 @@ function ReviewCarousel() {
 
   return (
     <div className="space-y-[8px] overflow-hidden pc:space-y-[20px]">
-      <InfiniteCarousel
-        items={topImages}
-        speed={2}
-        direction="left"
-        itemWidth={416}
-        itemHeight={250}
-      />
-      <InfiniteCarousel
-        items={bottomImages}
-        speed={2}
-        direction="right"
-        itemWidth={416}
-        itemHeight={250}
-      />
+      <div className="pl-[20px]">
+        <InfiniteCarousel
+          items={topImages}
+          speed={2}
+          direction="left"
+          itemWidth={416}
+          itemHeight={250}
+        />
+      </div>
+      <div className="pr-[20px]">
+        <InfiniteCarousel
+          items={bottomImages}
+          speed={2}
+          direction="right"
+          itemWidth={416}
+          itemHeight={250}
+        />
+      </div>
     </div>
   );
 }
