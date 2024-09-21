@@ -9,7 +9,6 @@ import ProfileImg5 from '@assets/images/image-profile-5.png';
 import ProfileImg6 from '@assets/images/image-profile-6.png';
 import ProfileImg7 from '@assets/images/image-profile-7.png';
 import ProfileImg8 from '@assets/images/image-profile-8.png';
-
 function GroupCarousel() {
   const carouselItems = [
     {
@@ -73,26 +72,25 @@ function GroupCarousel() {
       ProfilePics: [{ src: ProfileImg8, alt: 'Profile 8' }],
     },
   ];
-
   const renderCarouselItems = () => {
     return carouselItems.map((item, index) => (
       <CarouselCard key={index} {...item} />
     ));
   };
-
   return (
-    <section className="relative mt-[64px] w-full bg-white mobile:mt-[40px]">
-      <div className="carousel-container w-full max-w-[1890px] overflow-x-hidden">
+    <section className="flex relative mt-[64px] w-full bg-white mobile:mt-[40px]">
+      {' '}
+      <div className="flex carousel-container w-full max-w-[1890px] overflow-x-hidden">
+        {' '}
         <InfiniteCarousel
           items={renderCarouselItems()}
           speed={2}
           direction="left"
           itemWidth={480}
-          itemHeight={347}
-        />
-      </div>
+          itemHeight={380}
+        />{' '}
+      </div>{' '}
     </section>
   );
 }
-
 export default GroupCarousel;
