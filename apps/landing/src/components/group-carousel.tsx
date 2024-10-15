@@ -78,7 +78,7 @@ function GroupCarousel() {
     ));
   };
   return (
-    <section className="flex relative mt-[64px] w-full bg-white mobile:mt-[40px]">
+    <section className="flex relative mobile:mt-[40px] mt-[64px] w-full bg-white ">
       {' '}
       <div className="flex carousel-container w-full max-w-[2100px] overflow-x-hidden">
         {' '}
