@@ -80,7 +80,7 @@ function GroupCarousel() {
   return (
     <section className="flex relative mt-[64px] w-full bg-white mobile:mt-[40px]">
       {' '}
-      <div className="flex carousel-container w-full max-w-[1890px] overflow-x-hidden">
+      <div className="flex carousel-container w-full max-w-[2100px] overflow-x-hidden">
         {' '}
         <InfiniteCarousel
           items={renderCarouselItems()}
