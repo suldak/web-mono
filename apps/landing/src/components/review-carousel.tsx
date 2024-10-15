@@ -32,7 +32,7 @@ function ReviewCarousel() {
         <div className="pl-[20px]">
           <InfiniteCarousel
             items={topImages}
-            speed={2}
+            speed={2.5}
             direction="left"
             itemWidth={416}
             itemHeight={250}
@@ -41,7 +41,7 @@ function ReviewCarousel() {
         <div className="pr-[20px]">
           <InfiniteCarousel
             items={bottomImages}
-            speed={2}
+            speed={2.5}
             direction="right"
             itemWidth={416}
             itemHeight={250}
