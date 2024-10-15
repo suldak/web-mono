@@ -82,7 +82,7 @@ function GroupCarousel() {
       <div className="flex carousel-container mobile:hidden w-screen max-w-[2100px] overflow-x-hidden">
         <InfiniteCarousel
           items={renderCarouselItems()}
-          speed={2.25}
+          speed={4}
           direction="left"
           itemWidth={480}
           itemHeight={380}

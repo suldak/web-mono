@@ -32,7 +32,7 @@ function ReviewCarousel() {
         <div className="pl-[20px]">
           <InfiniteCarousel
             items={topImages}
-            speed={2.5}
+            speed={4}
             direction="left"
             itemWidth={416}
             itemHeight={250}
