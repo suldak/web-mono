@@ -19,7 +19,9 @@ function LandingPage() {
   }, []);
 
   const scrollToReservation = () => {
-    reservationRef.current?.scrollIntoView({ behavior: 'smooth' });
+    isMounted
+      ? reservationRef.current?.scrollIntoView({ behavior: 'smooth' })
+      : console.log('scrollToReserve');
   };
 
   if (!isMounted) {

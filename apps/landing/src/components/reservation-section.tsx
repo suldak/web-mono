@@ -9,7 +9,9 @@ import { useEnrollReservation } from '@apis/useEnrollReservation';
 
 function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
   const [email, setEmail] = useState('');
-  const [enrollmentStatus, setEnrollmentStatus] = useState<'success' | 'error' | null>(null);
+  const [enrollmentStatus, setEnrollmentStatus] = useState<
+    'success' | 'error' | null
+  >(null);
   const { mutate, isLoading } = useEnrollReservation();
 
   const handleSubscribe = async () => {
@@ -30,12 +32,22 @@ function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
   };
 
   return (
-    <div className="relative h-[684px] bg-suldak-mint-500 w-full mobile:h-[390px]" ref={ref}>
+    <div
+      className="relative h-[684px] bg-suldak-mint-500 w-full mobile:h-[390px]"
+      ref={ref}
+    >
       <div className="mobile:hidden tablet:hidden">
-        <Image alt="사전예약" layout="fill" objectFit="cover" src={ReservationImg} />
+        <Image
+          alt="사전예약"
+          layout="fill"
+          objectFit="cover"
+          src={ReservationImg}
+        />
       </div>
       <div className="absolute inset-0 z-10 flex w-full flex-col items-center justify-center text-white">
-        <div className="text-[80px] font-bold mobile:text-[36px]">술닥술닥 사전예약</div>
+        <div className="text-[80px] font-bold mobile:text-[36px]">
+          술닥술닥 사전예약
+        </div>
         <div className="mb-[40px] text-center text-[30px] mobile:text-[16px]">
           메일주소를 입력하시면 술닥술닥의
           <br className="pc:hidden" />
@@ -44,6 +56,7 @@ function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
         <div className="flex flex-col items-center space-y-4">
           <div className="flex items-center text-[25px] mobile:flex-col mobile:justify-center mobile:space-y-[8px] mobile:text-[16px] tablet:flex-col tablet:space-y-[8px]">
             <input
+              id="email-input"
               className="h-[68px] w-[330px] rounded-[10px] bg-white/50 px-4 text-black mobile:h-[48px] tablet:w-[600px] pc:w-[809px]"
               onChange={(e) => {
                 setEmail(e.target.value);
@@ -68,9 +81,13 @@ function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
           </div>
           <div className="h-[24px] text-center">
             {enrollmentStatus === 'success' && (
-              <div className="text-black">사전예약이 완료되었습니다. 감사합니다.</div>
+              <div className="text-black">
+                사전예약이 완료되었습니다. 감사합니다.
+              </div>
             )}
-            {enrollmentStatus === 'error' && <div className="text-red-500">다시 시도해주세요.</div>}
+            {enrollmentStatus === 'error' && (
+              <div className="text-red-500">다시 시도해주세요.</div>
+            )}
           </div>
         </div>
       </div>
