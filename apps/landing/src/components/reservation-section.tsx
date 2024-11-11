@@ -45,7 +45,7 @@ function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
         />
       </div>
       <div className="absolute inset-0 z-10 flex w-full flex-col items-center justify-center text-white">
-        <div className="text-[80px] font-bold mobile:text-[36px]">
+        <div className="text-[80px] pc:font-bold font-semibold mobile:text-[36px]">
           술닥술닥 사전예약
         </div>
         <div className="mb-[40px] text-center text-[30px] mobile:text-[16px]">
