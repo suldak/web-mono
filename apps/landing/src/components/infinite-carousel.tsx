@@ -49,7 +49,7 @@ function InfiniteCarousel({
   const renderItems = () => {
     return items.concat(items).map((item, index) => (
       <div
-        className="flex bg-white relative items-center shrink-0 mr-[20px] mobile:mr-[10px]"
+        className="flex overflow-hidden bg-white relative rounded-[20px] items-center shrink-0 mr-[20px] mobile:mr-[10px]"
         key={index}
         style={{ width: `${itemWidth}px`, height: `${itemHeight}px` }}
       >
