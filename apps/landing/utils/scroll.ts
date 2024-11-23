@@ -1,9 +1,9 @@
 // utils/scroll.ts
 
 /**
- * Scrolls to the specified element with an optional offset
- * @param element - The target HTML element to scroll to
- * @param offset - Optional offset from the top of the element
+ * 옵셔널한 offset과 함께 특정 element로 이동
+ * @param element - 스크롤해서 이동할 타겟 html element
+ * @param offset - 옵셔널한 오프셋
  */
 export const scrollToElement = (
   element: HTMLElement | null,
@@ -21,9 +21,9 @@ export const scrollToElement = (
 };
 
 /**
- * Gets the height of an element by class name
- * @param className - The class name of the element
- * @returns The height of the element or 0 if not found
+   클래스네임으로 element의 height 가져옴
+ * @param className - element의 클래스네임
+ * @returns element height / 0(못 찾은 경우)
  */
 export const getElementHeight = (className: string): number => {
   const element = document.querySelector(className);

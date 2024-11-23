@@ -12,10 +12,7 @@ interface HeaderProps {
 }
 
 // Lottie 컴포넌트를 동적으로 불러오기
-const Lottie = dynamic(() => import('lottie-react'), {
-  ssr: false,
-  loading: () => <div className="w-[1000px] h-[474px]" />,
-});
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 
 function Header({ scrollToReservation }: HeaderProps): JSX.Element {
   return (
