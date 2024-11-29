@@ -93,7 +93,7 @@ function ReviewCarousel() {
         <div>
           <InfiniteCarousel
             items={topImages}
-            speed={2.5}
+            speed={2.3}
             direction="left"
             itemWidth={168}
             itemHeight={120}
@@ -102,7 +102,7 @@ function ReviewCarousel() {
         <div>
           <InfiniteCarousel
             items={bottomImages}
-            speed={2.5}
+            speed={2.3}
             direction="right"
             itemWidth={168}
             itemHeight={120}
