@@ -73,39 +73,36 @@ function ReviewCarousel() {
   return (
     <>
       <div className="mobile:hidden overflow-hidden space-y-[20px]">
-        <div className="pl-[20px]">
-          <InfiniteCarousel
-            items={topImages}
-            speed={4}
-            direction="left"
-            itemWidth={416}
-            itemHeight={250}
-          />
-        </div>
-        <div className="pr-[20px]">
-          <InfiniteCarousel
-            items={bottomImages}
-            speed={2.5}
-            direction="right"
-            itemWidth={416}
-            itemHeight={250}
-          />
-        </div>
+        <InfiniteCarousel
+          items={topImages}
+          speed={4}
+          direction="left"
+          itemWidth={416}
+          itemHeight={250}
+        />
+
+        <InfiniteCarousel
+          items={bottomImages}
+          speed={4}
+          direction="right"
+          itemWidth={416}
+          itemHeight={250}
+        />
       </div>
       <div className="tablet:hidden pc:hidden overflow-hidden space-y-[8px]">
-        <div className="pl-[8px]">
+        <div>
           <InfiniteCarousel
             items={topImages}
-            speed={2}
+            speed={2.5}
             direction="left"
             itemWidth={168}
             itemHeight={120}
           />
         </div>
-        <div className="pr-[8px]">
+        <div>
           <InfiniteCarousel
             items={bottomImages}
-            speed={2}
+            speed={2.5}
             direction="right"
             itemWidth={168}
             itemHeight={120}
