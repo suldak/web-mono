@@ -65,6 +65,8 @@ function InfiniteCarousel({
               objectFit="cover"
               width={itemWidth}
               height={itemHeight}
+              loading="lazy"
+              placeholder="blur"
             />
           </div>
         ) : (
