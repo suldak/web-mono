@@ -18,7 +18,7 @@ const OurCrewPage = (): JSX.Element | null => {
   }
 
   return (
-    <div className="w-full flex flex-col items-center justify-center font-pretendard">
+    <div className="w-full flex flex-col items-center justify-center">
       <GlobalNavigationBar />
       <CrewDescriptHeader />
       <MascotSection />
