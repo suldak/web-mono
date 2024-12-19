@@ -1,4 +1,5 @@
 import { usePathname } from 'next/navigation';
+import Logo from '@assets/icons/ico-medium-logo.svg';
 import Link from 'next/link';
 
 function GlobalNavigationBar() {
@@ -11,31 +12,38 @@ function GlobalNavigationBar() {
 
   return (
     <>
-      {/* 실제 네비게이션 바 */}
-      <div className="fixed top-0 z-50å left-0 right-0 h-[60px] bg-suldak-mint-500 backdrop-blur-sm z-50">
-        <nav className="h-full max-w-7xl mx-auto flex justify-end items-center pr-8">
-          <div className="flex gap-8">
-            <Link
-              href="/"
-              className={`text-lg text-white hover:opacity-80 transition-opacity ${
-                pathname === '/' ? 'font-bold' : 'font-normal'
-              }`}
-            >
-              HOME
-            </Link>
-            <Link
-              href="/our-crew"
-              className={`text-lg text-white hover:opacity-80 transition-opacity ${
-                pathname === '/our-crew' ? 'font-bold' : 'font-normal'
-              }`}
-            >
-              Our Crew
-            </Link>
-            <button onClick={handleContactClick} className="text-lg text-white">
-              Contact
-            </button>
+      <div className="w-screen fixed top-0 left-0 right-0 h-[60px] bg-suldak-mint-500 backdrop-blur-sm z-50">
+        <div className="h-full w-full flex items-center relative">
+          <div className="absolute" style={{ left: '18.75%' }}>
+            <Logo />
           </div>
-        </nav>
+          <nav className="w-full flex justify-end items-center">
+            <div className="flex gap-8 absolute" style={{ right: '18.75%' }}>
+              <Link
+                href="/"
+                className={`text-lg text-white hover:opacity-80 transition-opacity ${
+                  pathname === '/' ? 'font-bold' : 'font-normal'
+                }`}
+              >
+                HOME
+              </Link>
+              <Link
+                href="/our-crew"
+                className={`text-lg text-white hover:opacity-80 transition-opacity ${
+                  pathname === '/our-crew' ? 'font-bold' : 'font-normal'
+                }`}
+              >
+                Our Crew
+              </Link>
+              <button
+                onClick={handleContactClick}
+                className="text-lg text-white"
+              >
+                Contact
+              </button>
+            </div>
+          </nav>
+        </div>
       </div>
 
       {/* 스페이서 div */}
@@ -43,5 +51,4 @@ function GlobalNavigationBar() {
     </>
   );
 }
-
 export default GlobalNavigationBar;
