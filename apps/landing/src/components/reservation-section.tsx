@@ -34,6 +34,7 @@ function ReservationSection(props: any, ref: ForwardedRef<HTMLDivElement>) {
   return (
     <div
       className="relative h-[684px] bg-suldak-mint-500 w-full mobile:h-[390px]"
+      data-section="reservation"
       ref={ref}
     >
       <div className="mobile:hidden tablet:hidden">

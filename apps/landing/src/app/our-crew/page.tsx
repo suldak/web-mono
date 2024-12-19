@@ -5,6 +5,7 @@ import GlobalNavigationBar from '@/components/global-navigation-bar';
 import CrewDescriptHeader from '@/components/crew/crew-descript-header';
 import MascotSection from '@/components/crew/mascot-section';
 import CrewSection from '@/components/crew/crew-section';
+import Footer from '@/components/footer';
 
 const OurCrewPage = (): JSX.Element | null => {
   const [isMounted, setIsMounted] = useState<boolean>(false);
@@ -23,6 +24,7 @@ const OurCrewPage = (): JSX.Element | null => {
       <CrewDescriptHeader />
       <MascotSection />
       <CrewSection />
+      <Footer />
     </div>
   );
 };

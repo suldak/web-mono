@@ -7,7 +7,15 @@ function GlobalNavigationBar() {
 
   const handleContactClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    window.location.href = 'mailto:suldak.official@gmail.com';
+
+    const footer = document.getElementById('footer');
+    if (footer) {
+      // 모든 페이지에서 동일하게 처리
+      footer.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end', // viewport의 끝에 요소가 위치하도록 스크롤
+      });
+    }
   };
 
   return (
@@ -37,7 +45,7 @@ function GlobalNavigationBar() {
               </Link>
               <button
                 onClick={handleContactClick}
-                className="text-lg text-white"
+                className="text-lg text-white hover:opacity-80 transition-opacity"
               >
                 Contact
               </button>
@@ -51,4 +59,5 @@ function GlobalNavigationBar() {
     </>
   );
 }
+
 export default GlobalNavigationBar;
