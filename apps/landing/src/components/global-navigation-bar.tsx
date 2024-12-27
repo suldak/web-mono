@@ -32,7 +32,7 @@ function GlobalNavigationBar() {
     <>
       <div className="w-screen fixed top-0 left-0 right-0 h-[62px] bg-suldak-mint-500 backdrop-blur-sm z-50">
         <div className="h-full w-full flex items-center justify-between relative mobile:px-[20px]">
-          <div className="absolute left-[18.75%] mobile:relative mobile:left-0">
+          <div className="absolute left-[18.75%] tablet:left-[40px] mobile:relative mobile:left-0">
             <Logo />
           </div>
           <div className="flex justify-end w-full mobile:w-auto">
@@ -49,7 +49,7 @@ function GlobalNavigationBar() {
               </div>
             </button>
             <nav className="mobile:hidden w-full flex justify-end items-center">
-              <div className="flex gap-8 absolute" style={{ right: '18.75%' }}>
+              <div className="flex gap-8 absolute right-[18.75%] tablet:right-[40px]">
                 <Link
                   href="/"
                   className={`text-lg text-white hover:opacity-80 transition-opacity ${
@@ -111,7 +111,7 @@ function GlobalNavigationBar() {
       )}
 
       {/* 스페이서 div */}
-      <div className="h-[62px]" />
+      <div className="h-[62px] bg-suldak-mint-500" />
     </>
   );
 }

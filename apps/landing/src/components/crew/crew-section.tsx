@@ -60,7 +60,7 @@ const crew: CrewData[] = [
     Crew: Geuntae,
     name: '박근태',
     mobileRole: '앱개발 파트에서 승민 코리한테 혼나는 포지션',
-    role: '앱개발 파트에서 승민코리한테 혼나는 포지션',
+    role: '앱개발 파트에서 승민 코리한테 혼나는 포지션',
     alchol: '위스키! 하이볼! 소맥! 스까먹기!를 좋아해요',
     favor: '제 일상은 재미가 없어서 남 일상 듣는게 제일 재밌어요',
     comment: '노는게 제일 좋아 친구들 모여라!',
@@ -78,7 +78,7 @@ const crew: CrewData[] = [
   {
     Crew: Jaehoon,
     name: '허재훈',
-    mobileRole: 'Back-end 개발 파트와 서버 관리 역할',
+    mobileRole: 'Back-end 개발 파트 및 서버 관리',
     role: 'Back-end 개발 파트와 서버 관리 역할을 맡고 있는 네버랜드입니다.',
     alchol: '와인, 막걸리를 제외하고는 잘 먹어요!',
     favor: '20대, 술 이야기, 노는 것 좋아합니다',
@@ -97,7 +97,7 @@ const crew: CrewData[] = [
   {
     Crew: Gichan,
     name: '이기찬',
-    mobileRole: '술닥술닥 백오피스',
+    mobileRole: '술닥술닥 백오피스 담당',
     role: '술닥술닥 백오피스를 맡고 있습니다.',
     alchol: '맥주를 좋아하고 쓴 맛 나는 술은 별로 안 좋아합니다',
     favor:
@@ -108,7 +108,7 @@ const crew: CrewData[] = [
   {
     Crew: Yoonjin,
     name: '안윤진',
-    mobileRole: ' 웹뷰 개발을 맡고 있는 웹 프론트엔드 개발자',
+    mobileRole: ' 웹뷰 개발 및 프론트엔드 개발',
     role: '랜딩페이지와 술닥술닥의 웹뷰 개발을 맡고 있는 웹 프론트엔드 개발자입니다',
     alchol: '맥주! 생맥주를 좋아해요 🍻',
     favor:
@@ -127,7 +127,7 @@ const crew: CrewData[] = [
   {
     Crew: Eunjin,
     name: '안은진',
-    mobileRole: 'BI/BX 파트로 재미있고 즐거운 경험을 디자인',
+    mobileRole: '즐거운 경험을 디자인하는 BI/BX',
     role: 'BI/BX 파트를 맡아 재미있고 즐거운 경험을 디자인하려 노력하고 있습니다.',
     alchol: '요즘은 전통주에 빠져있습니다. 청주가 좋아요!',
     favor:
@@ -150,10 +150,10 @@ function CrewSection() {
   return (
     <div className="flex w-full flex-col bg-suldak-mint-50 items-center py-24">
       <div className="flex flex-col w-full max-w-6xl">
-        <div className="flex  mobile:justify-center">
+        <div className="flex mobile:justify-center tablet:justify-center mb-[8px] pc:mb-[10px]">
           <TalkImg />
         </div>
-        <div className="mobile:text-center">
+        <div className="mobile:text-center tablet:text-center">
           <div className="text-[32px] mobile:text-[22px] font-semibold">
             술닥술닥을 함께
           </div>
@@ -161,8 +161,8 @@ function CrewSection() {
             만들어가는 동료들이예요
           </div>
         </div>
-        <div className="flex mobile:justify-center mobile:items-center">
-          <div className="mobile:gap-x-[20px] grid grid-cols-2 gap-[30px] mobile:gap-y-[30px] mt-[40px]">
+        <div className="flex mobile:justify-center mobile:items-center tablet:justify-center tablet:items-center">
+          <div className="mobile:gap-x-[20px] grid grid-cols-2 tablet:gap-x-auto gap-[30px] mobile:gap-y-[30px] mt-[40px]">
             {crew.map((member, index) => (
               <CrewCard key={index} {...member} />
             ))}

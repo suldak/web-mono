@@ -20,10 +20,10 @@ function MascotCard({
   return (
     <div className="flex mobile:w-[350px] w-[580px] h-[504px] mobile:h-[368px] justify-center items-center rounded-[40px] border border-gray-400 py-[40px] px-[118px] mobile:py-[20px]">
       <div className="flex flex-col justify-center items-center">
-        <div className="hidden mobile:block">
+        <div className="pc:hidden tablet:hidden">
           <MobileMascot />
         </div>
-        <div className="block mobile:hidden">
+        <div className="mobile:hidden">
           <Mascot />
         </div>
         <div className="text-[22px] mobile:text-[20px] font-bold mt-[24px]">

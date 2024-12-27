@@ -42,19 +42,21 @@ const mascots: MascotData[] = [
 
 function MascotSection() {
   return (
-    <div className="w-full flex flex-col items-center justify-center h-[860px] mobile:h-auto py-[120px] mobile:py-[60px]">
-      <div className="flex flex-col w-[1200px] mobile:w-full mobile:px-[20px] justify-center">
+    <div className="w-full flex flex-col items-center justify-center h-[860px] tablet:h-auto mobile:h-[1200px] py-[120px] mobile:py-[60px]">
+      <div className="flex flex-col pc:w-[1200px] mobile:w-full mobile:px-[20px] tablet:w-full tablet:px-[40px] justify-center">
         <div className="text-[32px] mobile:text-[22px] font-semibold">
-          <div className="flex mobile:justify-center mobile:mb-[8px]">
+          <div className="flex tablet:justify-center mobile:justify-center mb-[10px] mobile:mb-[8px]">
             <TalkImg />
           </div>
-          <div className="mobile:hidden">술닥술닥의 마스코트를 소개합니다</div>
-          <div className="mobile:block hidden text-center">
+          <div className="mobile:hidden tablet:hidden  w-full">
+            술닥술닥의 마스코트를 소개합니다
+          </div>
+          <div className="pc:hidden  text-center">
             술닥술닥의 마스코트를 <br />
             소개합니다
           </div>
         </div>
-        <div className="flex mobile:flex-col gap-x-[40px] mt-[40px] mobile:gap-x-0 mobile:gap-y-[20px]">
+        <div className="flex mobile:flex-col tablet:flex-col mobile:items-center tablet:items-center gap-x-[40px] tablet:gap-y-[40px]  mt-[40px] mobile:gap-x-0 mobile:gap-y-[20px]">
           {mascots.map((mascot, index) => (
             <MascotCard key={index} {...mascot} />
           ))}
