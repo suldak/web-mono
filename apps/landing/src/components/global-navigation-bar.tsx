@@ -1,5 +1,7 @@
+'use client';
+
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Logo from '@assets/icons/ico-medium-logo.svg';
 import Bars from '@assets/icons/ico-bars.svg';
 import Link from 'next/link';
@@ -10,15 +12,28 @@ function GlobalNavigationBar() {
 
   const handleContactClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    const footer = document.getElementById('footer');
-    if (footer) {
-      footer.scrollIntoView({
-        behavior: 'smooth',
-        block: 'end',
-      });
+    if (typeof window !== 'undefined') {
+      const footer = document.getElementById('footer');
+      if (footer) {
+        footer.scrollIntoView({
+          behavior: 'smooth',
+          block: 'end',
+        });
+      }
     }
     setIsMenuOpen(false);
   };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -78,8 +93,7 @@ function GlobalNavigationBar() {
         </div>
       </div>
 
-      {/* 모바일 메뉴 */}
-      {isMenuOpen && (
+      {isMenuOpen ? (
         <div className="hidden mobile:block fixed h-full top-[60px] left-0 right-0 bg-suldak-mint-400 z-50">
           <div className="flex flex-col items-center py-[24px] gap-[24px]">
             <Link
@@ -108,9 +122,8 @@ function GlobalNavigationBar() {
             </button>
           </div>
         </div>
-      )}
+      ) : null}
 
-      {/* 스페이서 div */}
       <div className="h-[62px] bg-suldak-mint-500" />
     </>
   );

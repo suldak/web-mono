@@ -11,6 +11,7 @@ const Footer: React.ForwardRefRenderFunction<HTMLDivElement, FooterProps> = (
 ) => {
   return (
     <div
+      id="footer"
       ref={ref}
       className="bg-suldak-mint-600 mobile:py-[16px] flex h-[174px] w-full flex-col text-center items-center py-[31px] text-[12px] text-white mobile:text-[14px]"
     >
