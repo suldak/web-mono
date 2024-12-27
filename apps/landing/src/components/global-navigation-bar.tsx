@@ -30,7 +30,7 @@ function GlobalNavigationBar() {
 
   return (
     <>
-      <div className="w-screen fixed top-0 left-0 right-0 h-[60px] bg-suldak-mint-500 backdrop-blur-sm z-50">
+      <div className="w-screen fixed top-0 left-0 right-0 h-[62px] bg-suldak-mint-500 backdrop-blur-sm z-50">
         <div className="h-full w-full flex items-center justify-between relative mobile:px-[20px]">
           <div className="absolute left-[18.75%] mobile:relative mobile:left-0">
             <Logo />
@@ -111,7 +111,7 @@ function GlobalNavigationBar() {
       )}
 
       {/* 스페이서 div */}
-      <div className="h-[60px]" />
+      <div className="h-[62px]" />
     </>
   );
 }
