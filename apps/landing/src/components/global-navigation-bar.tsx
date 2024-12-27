@@ -20,7 +20,7 @@ function GlobalNavigationBar() {
 
   return (
     <>
-      <div className="w-screen fixed top-0 left-0 right-0 h-[60px] bg-suldak-mint-500 backdrop-blur-sm z-50">
+      <div className="mobile:hidden w-screen fixed top-0 left-0 right-0 h-[60px] bg-suldak-mint-500 backdrop-blur-sm z-50">
         <div className="h-full w-full flex items-center relative">
           <div className="absolute" style={{ left: '18.75%' }}>
             <Logo />
