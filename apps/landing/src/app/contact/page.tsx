@@ -19,15 +19,17 @@ const ContactPage = (): JSX.Element | null => {
   return (
     <div className="w-full flex flex-col items-center justify-center bg-suldak-mint-500">
       <GlobalNavigationBar />
-      <div className="relative flex flex-col w-full h-[920px] items-center justify-center">
+      <div className="relative flex flex-col my-[40px] pc:my-0 w-full pc:h-[920px] items-center justify-center">
         {/* MessageIcon을 배경으로 배치 */}
-        <div className="absolute flex left-[180px] mobile:hidden justify-center z-0">
+        <div className="absolute flex left-[180px] mobile:hidden tablet:hidden justify-center z-0">
           <MessageIcon />
         </div>
         {/* 메인 콘텐츠를 앞으로 배치 */}
-        <div className="flex-col flex gap-[40px] relative z-10">
-          <div className="text-white text-[56px] font-semibold">Contact Us</div>
-          <div className="flex gap-[40px]">
+        <div className="flex-col flex gap-[40px] mobile:gap-[20px] relative z-10">
+          <div className="text-white mobile:text-center text-[56px] mobile:text-[36px] font-semibold">
+            Contact Us
+          </div>
+          <div className="flex mobile:flex-col tablet:flex-col gap-[40px] mobile:gap-[20px]">
             <ContactChannel
               name="E-mail"
               copy="suldak.official@gmail.com"
@@ -39,7 +41,7 @@ const ContactPage = (): JSX.Element | null => {
               show="suldak.tistory.com"
             />
           </div>
-          <div className="flex gap-[40px]">
+          <div className="flex mobile:flex-col tablet:flex-col gap-[40px] mobile:gap-[20px]">
             <ContactChannel name="Kakao talk" />
             <ContactChannel
               name="Instagram"
