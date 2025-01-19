@@ -4,8 +4,7 @@ import TalkImg from '@assets/icons/ico-talk.svg';
 import MascotCard from '@/components/crew/mascot-card';
 import SmallAriMascot from '@assets/icons/ico-small-ari.svg';
 import SmallCoriMascot from '@assets/icons/ico-small-cori.svg';
-// SVG 컴포넌트를 위한 타입 정의
-type SVGComponent = React.FC<React.SVGProps<SVGSVGElement>>;
+import SVGComponent from '@utils/types';
 
 interface MascotData {
   Mascot: SVGComponent;

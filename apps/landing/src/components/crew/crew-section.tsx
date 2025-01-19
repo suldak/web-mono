@@ -11,8 +11,7 @@ import HwijungImage from '@assets/icons/ico-member-hwijung.svg';
 import YoonjinImage from '@assets/icons/ico-member-yoonjin.svg';
 import EunjinImage from '@assets/icons/ico-member-eunjin.svg';
 import HiwonImage from '@assets/icons/ico-member-hiwon.svg';
-
-type SVGComponent = React.FC<React.SVGProps<SVGSVGElement>>;
+import SVGComponent from '@utils/types';
 
 interface CrewData {
   Crew: SVGComponent;
