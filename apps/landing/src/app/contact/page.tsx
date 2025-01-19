@@ -72,7 +72,8 @@ const ContactPage = () => {
 
       {/* 이메일 복사 알림*/}
       <div
-        className={`fixed bottom-[20px] left-1/2 w-[335px] h-[45px] justify-center items-center flex transform -translate-x-1/2 bg-suldak-gray-800 text-white px-4 py-2 rounded-[10px] transition-opacity duration-300 ${
+        style={{ top: 'calc(100vh - 80px)' }}
+        className={`fixed z-40 left-1/2 w-[335px] h-[45px] justify-center items-center flex transform -translate-x-1/2 bg-suldak-gray-800 text-white px-4 py-2 rounded-[10px] transition-opacity duration-300 ${
           showCopyNotification ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
       >
