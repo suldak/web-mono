@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import ContentWrapper from '@components/contact/content-wrapper';
 import SVGComponent from '@utils/types';
 interface Props {
@@ -27,23 +26,10 @@ function ContactChannel({ name, link, copy, show, Icon, onCopy }: Props) {
   return (
     <ContentWrapper link={link} onClick={handleCopy}>
       <Icon />
-      <div className="flex flex-col ml-[40px] mobile:ml-0 mt-[20px] pc:mt-[33px] text-suldak-gray-900">
+      <div className="mobile:w-max mobile:h-[54px] mobile:mt-[20px] flex flex-col ml-[40px] mobile:ml-0  pc:mt-[33px] text-suldak-gray-900">
         <div className="text-[24px] font-semibold w-full">{name}</div>
-        {link && (
-          <Link
-            className="text-[16px]"
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {show}
-          </Link>
-        )}
-        {copy && (
-          <button className="text-[16px] text-left" onClick={handleCopy}>
-            {copy}
-          </button>
-        )}
+        <div className="text-[16px]"> {show}</div>
+        {copy}
       </div>
     </ContentWrapper>
   );
