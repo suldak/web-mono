@@ -5,6 +5,16 @@ import Footer from '@/components/footer';
 import GlobalNavigationBar from '@/components/global-navigation-bar';
 import { useState } from 'react';
 import MessageIcon from '@assets/icons/ico-big-message.svg';
+import EmailImage from '@assets/icons/ico-email.svg';
+import BlogImage from '@assets/icons/ico-blog.svg';
+import KakaoImage from '@assets/icons/ico-kakao.svg';
+import InstagramImage from '@assets/icons/ico-instagram.svg';
+import SVGComponent from '@utils/types';
+
+const EmailIcon = EmailImage as SVGComponent;
+const BlogIcon = BlogImage as SVGComponent;
+const KakaoIcon = KakaoImage as SVGComponent;
+const InstagramIcon = InstagramImage as SVGComponent;
 
 const ContactPage = () => {
   const [showCopyNotification, setShowCopyNotification] = useState(false);
@@ -34,22 +44,26 @@ const ContactPage = () => {
               name="E-mail"
               copy="suldak.official@gmail.com"
               onCopy={handleCopy}
+              Icon={EmailIcon}
             />
             <ContactChannel
               name="Blog"
               link="http://suldak.tistory.com"
               show="suldak.tistory.com"
+              Icon={BlogIcon}
             />
           </div>
           <div className="flex mobile:flex-col tablet:flex-col gap-[40px] mobile:gap-[20px]">
             <ContactChannel
               name="Kakao talk"
               link="http://pf.kakao.com/_xdHqHG/friend"
+              Icon={KakaoIcon}
             />
             <ContactChannel
               name="Instagram"
               show="@suldak.official"
               link="https://www.instagram.com/suldak.official/"
+              Icon={InstagramIcon}
             />
           </div>
         </div>
