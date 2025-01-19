@@ -42,7 +42,10 @@ const ContactPage = () => {
             />
           </div>
           <div className="flex mobile:flex-col tablet:flex-col gap-[40px] mobile:gap-[20px]">
-            <ContactChannel name="Kakao talk" />
+            <ContactChannel
+              name="Kakao talk"
+              link="http://pf.kakao.com/_xdHqHG/friend"
+            />
             <ContactChannel
               name="Instagram"
               show="@suldak.official"

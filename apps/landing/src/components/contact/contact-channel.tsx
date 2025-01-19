@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import ContactChannelImage from './contact-channel-image';
+import ContentWrapper from '@components/contact/content-wrapper';
 interface Props {
   name: string;
   link?: string;
@@ -12,18 +13,18 @@ interface Props {
 
 function ContactChannel({ name, link, copy, show, onCopy }: Props) {
   const handleCopy = async () => {
-    if (copy) {
-      try {
-        await navigator.clipboard.writeText(copy);
-        onCopy?.();
-      } catch (err) {
-        console.error('Failed to copy text:', err);
-      }
+    if (!copy) return;
+
+    try {
+      await navigator.clipboard.writeText(copy);
+      onCopy?.();
+    } catch (err) {
+      console.error('Failed to copy text:', err);
     }
   };
 
   return (
-    <div className="flex mobile:items-center mobile:flex-col  mobile:text-center bg-white rounded-[40px] mobile:w-[340px] mobile:h-[274px] w-[580px] h-[200px] p-[40px]">
+    <ContentWrapper link={link} onClick={handleCopy}>
       <ContactChannelImage link={link} />
       <div className="flex flex-col ml-[40px] mobile:ml-0 mt-[20px] pc:mt-[33px] text-suldak-gray-900">
         <div className="text-[24px] font-semibold w-full">{name}</div>
@@ -43,7 +44,7 @@ function ContactChannel({ name, link, copy, show, onCopy }: Props) {
           </button>
         )}
       </div>
-    </div>
+    </ContentWrapper>
   );
 }
 
