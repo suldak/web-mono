@@ -1,13 +1,12 @@
 'use client';
 
 import ContentWrapper from '@components/contact/content-wrapper';
-import SVGComponent from '@utils/types';
 interface Props {
   name: string;
   link?: string;
   copy?: string;
   show?: string;
-  Icon: SVGComponent;
+  Icon: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
   onCopy?: () => void;
 }
 

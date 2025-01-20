@@ -5,16 +5,10 @@ import Footer from '@/components/footer';
 import GlobalNavigationBar from '@/components/global-navigation-bar';
 import { useState } from 'react';
 import MessageIcon from '@assets/icons/ico-big-message.svg';
-import EmailImage from '@assets/icons/ico-email.svg';
-import BlogImage from '@assets/icons/ico-blog.svg';
-import KakaoImage from '@assets/icons/ico-kakao.svg';
-import InstagramImage from '@assets/icons/ico-instagram.svg';
-import SVGComponent from '@utils/types';
-
-const EmailIcon = EmailImage as SVGComponent;
-const BlogIcon = BlogImage as SVGComponent;
-const KakaoIcon = KakaoImage as SVGComponent;
-const InstagramIcon = InstagramImage as SVGComponent;
+import EmailIcon from '@assets/icons/ico-email.svg';
+import BlogIcon from '@assets/icons/ico-blog.svg';
+import KakaoIcon from '@assets/icons/ico-kakao.svg';
+import InstagramIcon from '@assets/icons/ico-instagram.svg';
 
 const ContactPage = () => {
   const [showCopyNotification, setShowCopyNotification] = useState(false);
